@@ -1,0 +1,5 @@
+# 기본 실험 설정 (값은 이후 단계에서 채움)
+# data: 사용할 파일, 분할 비율, 윈도우 길이 W, horizon h
+# model: 종류, hidden size, 층 수
+# train: lr, batch size, epochs, grad clip
+# detect: 평활 계수, 임계값 방식
