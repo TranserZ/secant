@@ -1,0 +1,11 @@
+{
+  "name": "SECANT",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "secant",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "ms-toolsai.jupyter"]
+    }
+  }
+}

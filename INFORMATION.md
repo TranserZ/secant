@@ -11,7 +11,12 @@ README에 담기엔 깊지만 프로젝트를 이해하는 데 중요한 내용�
 secant/
 ├── README.md              프로젝트 개요 + 실행 방법
 ├── INFORMATION.md         (이 문서) 상세 정보
-├── requirements.txt       파이썬 의존성
+├── CONTRIBUTING.md        협업 규칙 (브랜치, PR, 커밋, 기록)
+├── requirements.txt       파이썬 의존성 (버전 고정, torch는 Dockerfile에서 설치)
+├── Dockerfile             실행 환경 이미지 (python 3.12.16-slim + torch 2.14.1 CPU)
+├── docker-compose.yml     실행 서비스: secant(명령 실행), jupyter(localhost:8888)
+├── .dockerignore          빌드 컨텍스트를 requirements.txt로 제한
+├── .devcontainer/         VS Code Dev Container 설정
 ├── .gitignore
 ├── configs/
 │   └── default.yaml       실험 설정 (W, h, hidden size, lr, 임계값 등)
@@ -19,6 +24,7 @@ secant/
 │   ├── raw/               NAB 원본 CSV + 라벨 JSON (수정 금지)
 │   └── processed/         전처리된 중간 데이터
 ├── scripts/
+│   ├── check_env.py       환경 점검 (패키지 버전 + LSTM 동작 확인)
 │   └── download_nab.py    NAB 데이터 다운로드
 ├── src/
 │   ├── __init__.py
